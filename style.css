@@ -1,0 +1,141 @@
+/* IMPORTA FONTES */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap');
+
+*{
+    /* FAZENDO RESET DE CONFIGS CSS*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    /* VARIAVEIS GLOBAIS */
+    --red: #d63a25;
+    --white: #fff;
+    --dark: #1e1c2a;
+}
+
+body{
+    color: var(--dark);
+    background: var(--white);
+}
+
+.navigation{
+    display: flex;
+    padding: 18px 40px;
+    flex-direction: row;
+    background: var(--white);
+    width: 100%;
+    transition: all 0.5s; 
+    align-items: center; /*alinhamento em eixo transversal - safe e unsafe em casos de data loss*/
+    justify-content: space-between; /*justificação em eixo principal*/
+    box-shadow: 0 0.1rem 0.5rem #ccc; /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
+    position: fixed; /* Manter a barra fixa*/
+}
+
+
+
+.nav-menu{
+    display: flex; /* https://triangulo.dev/posts/guia-completo-flexbox */
+}
+
+.bxs-invader{
+    color: var(--red);
+    font-size: 2.7rem;
+}
+
+.navigation ul{
+    display: flex;
+    gap: 5rem;
+    align-items: center;
+}
+
+.navigation ul li a{
+    color: var(--dark);
+    font-size: 17px;
+    font-weight: 500;
+    transition: all 0.5s;
+}
+
+.navigation ul li a:hover{
+    color: var(--red);
+}
+
+.navigation ul i{
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.menu{
+    cursor: pointer;
+    display: none; /* esconde o icone de menu*/
+}
+.menu .bar{
+    display: block;
+    height: 3px;
+    width: 28px;
+    border-radius: 3px;
+    background: var(--dark);
+    margin: 5px auto;
+    transition: all 0.3s;
+}
+
+.menu .bar:nth-child(1),
+.menu .bar:nth-child(3){
+    background: var(--red);
+}
+
+.home{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 10%;
+}
+
+.home-text{
+    max-width: 37rem;
+}
+
+.home .text-h4{
+    font-size: 1.5rem;
+    color: var(--red);
+    margin-bottom: 1rem;
+}
+
+.home-text .text-h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    line-height: 4rem;
+    color: var(--dark);
+}
+
+.home p{
+    margin-bottom: 30px;
+}
+
+.home a{
+    color: var(--dark);
+    transition: all 0.5s;
+    padding: 10px;
+}
+
+.home a:hover{
+    color: var(--red);
+    background-color: #d63a25;
+    color: var(--white);
+    margin: 10px;
+}
+
+.home-img{
+    margin-top: 50px;
+}
+.home-img img{
+    width: auto;
+    height: 400px;
+}
+
